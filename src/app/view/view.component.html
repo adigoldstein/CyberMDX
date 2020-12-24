@@ -1,0 +1,48 @@
+<section *ngIf="data['mdefend']?.length">
+  <h2>MDefend</h2>
+  <div class="mdef-wrapper">
+    <div *ngFor="let item of data['mdefend']" class="mdefend-item">
+      <div class="info">
+        <img src='{{ "../../assets/images/status-" + item.status + ".svg"}}' alt="status">
+        <span>status: {{item.status === 'good' ? 'good' : 'bad'}}</span>
+        <span>name:{{item.name}}</span>
+        <span>addr: {{item.addr}}</span>
+
+      </div>
+      <img src="" alt="logo">
+
+    </div>
+  </div>
+</section>
+<div class="hr"></div>
+
+<h2>3rd Party integration</h2>
+<section>
+  <h4>active</h4>
+  <div class="active-wrapper">
+    <div *ngFor="let item of data['integrations'].active" class="active-item">
+      <div class="info">
+        <span>status: {{item.status === 'good' ? 'good' : 'bad'}}</span>
+        <span>name:{{item.name}}</span>
+        <span>addr: {{item.addr}}</span>
+      </div>
+      <img src="../../assets/images/paloalto.png" alt="logo">
+    </div>
+  </div>
+</section>
+<section>
+  <h2>3rd Party integration</h2>
+  <h4>possible</h4>
+  <div class="possible-wrapper">
+    <div *ngFor="let item of data['integrations'].possible" class="possible-item">
+      <div class="info">
+        <span>status: {{item.status === 'good' ? 'good' : 'bad'}}</span>
+        <span>name:{{item.name}}</span>
+      </div>
+      <img src="" alt="logo">
+    </div>
+  </div>
+</section>
+
+
+
